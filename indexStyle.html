@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Money Manager</title>
+</head>
+<body>
+    <section class="left">
+        <nav>
+            <a href="#">MONEY MANAGER</a>
+        </nav>
+
+        <div class="inputs">
+            <h3>Total Amount: $</h3> <input type="text" name="total">
+
+            <div class="funds">
+                <span class="fund"><h3>Savings:</h3> <input type="text" name="savings"><h3>%<span id="savings" class="fundAmount">$000.00</span></h3></span>
+                <span class="fund"><h3>Bills:</h3> <input type="text" name="bills"><h3>%<span id="bills" class="fundAmount">$000.00</span></h3></span>
+                <span class="fund"><h3>Spending:</h3> <input type="text" name="spending"><h3>%<span id="spending" class="fundAmount">$000.00</span></h3></span>
+                <span class="fund"><h3>Gifts:</h3> <input type="text" name="gifts"><h3>%<span id="gifts" class="fundAmount">$000.00</span></h3></span>
+            </div>
+
+            <button class="btn" id="calculate">Calculate</button>
+        </div>
+    </section>
+    <section class="right">
+        <div class="comingsoon">
+            <h1>Pie Graph Coming Soon</h1>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
