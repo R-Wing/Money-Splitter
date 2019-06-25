@@ -18,7 +18,7 @@ function calculate() {
       savings.style.display = "inline";
       spending.style.display = "inline";
     } else {
-      alert("not enough");
+      alert("Percentages don't equal 100");
     }
   } else {
   	alert("Please enter a total");
@@ -28,6 +28,11 @@ function calculate() {
 function calculatePercentage(value) {
 	return value / 100;
 }
+
+// function calculateAmount(value, percentage) {
+//   let amount = value * percentage;
+//   return amount.toFixed(2);
+// }
 
 function checkIfHundred(arr) {
 	let total = 0;

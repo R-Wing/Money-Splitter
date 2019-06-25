@@ -14,17 +14,19 @@
             <a href="#">MONEY MANAGER</a>
         </nav>
 
-        <div class="inputs">
-            <h3>Total Amount: $</h3> <input type="text" name="total">
-
-            <div class="funds">
-                <span class="fund"><h3>Savings:</h3> <input type="text" name="savings"><h3>%<span id="savings" class="fundAmount">$000.00</span></h3></span>
-                <span class="fund"><h3>Bills:</h3> <input type="text" name="bills"><h3>%<span id="bills" class="fundAmount">$000.00</span></h3></span>
-                <span class="fund"><h3>Spending:</h3> <input type="text" name="spending"><h3>%<span id="spending" class="fundAmount">$000.00</span></h3></span>
-                <span class="fund"><h3>Gifts:</h3> <input type="text" name="gifts"><h3>%<span id="gifts" class="fundAmount">$000.00</span></h3></span>
+        <div class="bottom">
+            <div class="inputs">
+                <h3>Total Amount: $</h3> <input type="text" name="total">
+    
+                <div class="funds">
+                    <span class="fundWrapper"><h3>Savings:</h3> <input type="text" name="savings" class="fund"><h3>%<span id="savings" class="fundAmount">$000.00</span></h3></span>
+                    <span class="fundWrapper"><h3>Bills:</h3> <input type="text" name="bills" class="fund"><h3>%<span id="bills" class="fundAmount">$000.00</span></h3></span>
+                    <span class="fundWrapper"><h3>Spending:</h3> <input type="text" name="spending" class="fund"><h3>%<span id="spending" class="fundAmount">$000.00</span></h3></span>
+                    <span class="fundWrapper"><h3>Gifts:</h3> <input type="text" name="gifts" class="fund"><h3>%<span id="gifts" class="fundAmount">$000.00</span></h3></span>
+                </div>
+    
+                <button class="btn" id="calculate">Calculate</button>
             </div>
-
-            <button class="btn" id="calculate">Calculate</button>
         </div>
     </section>
     <section class="right">
@@ -33,6 +35,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="decimal.min.js"></script>
+    <script src="scriptRefactor.js"></script>
 </body>
 </html>
