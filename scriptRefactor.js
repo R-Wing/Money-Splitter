@@ -11,9 +11,14 @@ function calculate() {
             let percentage = new Decimal(fund.value / 100);
             percentages.push(percentage);
             let amount = total * percentage;
+            amount = amount.toFixed(2, Decimal.ROUND_DOWN);
             amounts.push(amount);
         }
         if (checkIfHundredPercent(percentages)) {
+            let leftover = checkIfEqualsTotal(amounts, total);
+            if(leftover > 0) {
+                alert(`You have $${leftover} left over to put wherever you want!`)
+            }
             displayAmounts(amounts);
         } else {
             alert("Your percentage split doesn't equal 100");
@@ -29,6 +34,16 @@ function checkIfHundredPercent(arr) {
         total = Decimal.add(total, percent);
     });
     return total == 1;
+}
+
+function checkIfEqualsTotal(amounts, total) {
+    let amountTotal = new Decimal(0);
+    amounts.forEach(amount => {
+        amountTotal = Decimal.add(amountTotal, amount);
+    });
+    let leftover = total - amountTotal
+    leftover = leftover.toFixed(2);
+    return leftover;
 }
 
 function displayAmounts(amounts) {
