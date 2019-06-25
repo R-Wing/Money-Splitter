@@ -13,7 +13,9 @@ function calculate() {
             let percentage = new Decimal(fund.value / 100);
             percentages.push(percentage);
             let amount = total * percentage;
-            amount = amount.toFixed(2, Decimal.ROUND_DOWN);
+            // alert(amount);
+            amount = truncateToDecimals(amount);
+            // alert(amount);
             amounts.push(amount);
         }
         if (checkIfHundredPercent(percentages)) {
@@ -41,7 +43,7 @@ function checkIfEqualsTotal(amounts, total) {
     amounts.forEach(amount => {
         amountTotal = Decimal.add(amountTotal, amount);
     });
-    let leftover = total - amountTotal
+    let leftover = Decimal.sub(total, amountTotal);
     leftover = leftover.toFixed(2);
     return leftover;
 }
@@ -52,4 +54,9 @@ function displayAmounts(amounts) {
         funds[i].innerText = " - $" + amounts[i];
         funds[i].style.display = "inline";
     }
+}
+
+function truncateToDecimals(num, dec = 2) {
+    const calcDec = Math.pow(10, dec);
+    return Math.trunc(num * calcDec) / calcDec;
 }
