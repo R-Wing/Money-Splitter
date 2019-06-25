@@ -1,6 +1,8 @@
 const calculateBtn = document.getElementById("calculate");
 calculateBtn.addEventListener("click", calculate);
 
+const leftovertext = document.getElementById("leftoveramount");
+
 function calculate() {
     const total = document.getElementsByName("total")[0].value;
     const funds = document.getElementsByClassName("fund");
@@ -16,9 +18,7 @@ function calculate() {
         }
         if (checkIfHundredPercent(percentages)) {
             let leftover = checkIfEqualsTotal(amounts, total);
-            if(leftover > 0) {
-                alert(`You have $${leftover} left over to put wherever you want!`)
-            }
+            leftovertext.innerText = leftover;
             displayAmounts(amounts);
         } else {
             alert("Your percentage split doesn't equal 100");
