@@ -75,6 +75,24 @@ body {
     background-color: #f7f7f7;
 }
 
+.left .icon {
+    background-color: #e74c3c;
+    height: 40px;
+    text-align: center;
+    color: white;
+    width: 0;
+    display: inline-block;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.2s linear;
+}
+
+.left li:hover .icon {
+    width: 40px;
+    opacity: 1;
+}
+
 .left input {
     border: none;
     border-bottom: 1px solid black;
@@ -92,6 +110,17 @@ body {
     margin-top: 25px;
 }
 
+.left .buttonContainer .plus {
+    background-color: #79dbaa;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+}
+
 .btn {
     padding: 8px 12px;
     border: none;
@@ -104,11 +133,11 @@ body {
     transition: all .3s;
 }
 
-.btn:hover {
+.btn:hover, .left .buttonContainer .plus:hover {
     background-color: #66bc91;
 }
 
-.btn:active {
+.btn:active, .left .buttonContainer .plus:active  {
     background-color: #5aad84;
     outline: none;
 }
