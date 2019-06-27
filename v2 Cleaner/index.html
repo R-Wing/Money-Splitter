@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Money Manager</title>
+</head>
+<body>
+
+    <section class="left">
+        <nav>
+            <a href="#">MONEY MANAGER</a>
+        </nav>
+
+        <div class="inputContainer">
+            <li>Total Amount: $ <input type="text" name="total"></li>
+        </div>
+
+        <div class="funds">
+            <ul>
+                <li>Savings <input type="text" name="fund"> | <span class="amount">$0.00</span></li>
+                <li>Spending <input type="text" name="fund"> | <span class="amount">$0.00</span></li>
+                <li>Bills <input type="text" name="fund"> | <span class="amount">$0.00</span></li>
+            </ul>
+        </div>
+
+        <div class="buttonContainer">
+            <button class="btn" id="calculate">Calculate</button>
+        </div>
+
+        <div class="container">
+            <div class="leftoveralert">
+                <li>You have $<span id="leftoveramount">0.00</span> left over</li>
+            </div>
+        </div>
+    </section>
+    
+    <section class="right">
+        <div class="comingsoon">
+            <h1>Pie Graph Coming Soon</h1>
+        </div>
+    </section>
+
+    <script src="../decimal.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
