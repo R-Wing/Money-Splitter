@@ -20,17 +20,24 @@
             <li>Total Amount: $ <input type="text" name="total"></li>
         </div>
 
+        <div class="container">
+            <div class="newFund">
+                <input type="text" placeholder="Add New Fund" name="newFund">
+                <span class="plus" id="addBtn"><i class="fas fa-plus"></i></span>
+            </div>
+        </div>
+
         <div class="funds">
-            <ul>
+            <ul id="fundList">
                 <li> <span class="icon"><i class="fas fa-trash"></i></span> Savings <input type="text" name="fund"> | <span class="amount">$0.00</span></li>
                 <li> <span class="icon"><i class="fas fa-trash"></i></span> Spending <input type="text" name="fund"> | <span class="amount">$0.00</span></li>
                 <li> <span class="icon"><i class="fas fa-trash"></i></span> Bills <input type="text" name="fund"> | <span class="amount">$0.00</span></li>
             </ul>
         </div>
 
-        <div class="buttonContainer">
+        <!-- <div class="buttonContainer">
             <span class="plus"><i class="fas fa-plus"></i></span>
-        </div>
+        </div> -->
 
         <div class="buttonContainer">
             <button class="btn" id="calculate">Calculate</button>

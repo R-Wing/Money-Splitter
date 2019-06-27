@@ -60,3 +60,49 @@ function truncateToDecimals(num, dec = 2) {
     const calcDec = Math.pow(10, dec);
     return Math.trunc(num * calcDec) / calcDec;
 }
+
+//Deleting Funds
+const deleteButtons = document.getElementsByClassName("icon");
+
+for(let button of deleteButtons){
+    button.addEventListener("click", deleteListing);
+}
+
+function deleteListing() {
+    let listing = this.parentElement;
+    listing.parentNode.removeChild(listing);
+}
+
+//Adding Funds
+const addBtn = document.getElementById("addBtn");
+addBtn.addEventListener("click", addListing);
+
+const newFundInput = document.getElementsByName("newFund")[0];
+const fundList = document.getElementById("fundList");
+
+function addListing() {
+    let newFundName = newFundInput.value;
+    newFundInput.value = "";
+
+    //Create Everything
+    let li = document.createElement("li");
+    let spanOne = document.createElement("span");
+    spanOne.setAttribute("class", "icon");
+    spanOne.addEventListener("click", deleteListing);
+    let i = document.createElement("i");
+    i.setAttribute("class", "fas fa-trash");
+    let input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.setAttribute("name", "fund");
+    let spanTwo = document.createElement("span");
+    spanTwo.setAttribute("class", "amount");
+
+    //Append things to each other
+    spanOne.appendChild(i);
+    spanTwo.append("$0.00");
+
+    li.append(spanOne, " ", newFundName, input, " | ", spanTwo);
+
+    //Append to List
+    fundList.append(li);
+}
