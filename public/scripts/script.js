@@ -114,7 +114,7 @@ function addListing() {
     fundNameSpan.append(newFundName);
     spanTwo.append("$0.00");
 
-    li.append(spanOne, " ", fundNameSpan, input, " | ", spanTwo);
+    li.append(spanOne, " ", fundNameSpan, " ", input, "% " + '\xa0' + " | ", spanTwo);
 
     //Append to List
     fundList.append(li);
@@ -127,6 +127,9 @@ Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = '#777';
 
 let chart;
+
+// drawChart(getFundNames(), [1, 1, 1], [.33, .33, .33]);
+calculate();
 
 function drawChart(labels, data, percentages) {
     chart = new Chart(ctx, {
@@ -176,12 +179,13 @@ function generateColors(data) {
 }
 
 function map(position, in_min, in_max, out_min, out_max) {
-    if(in_min === in_max) {
+    if (in_min === in_max) {
         if(position >= .5) {
             in_max = 0
         } else {
             in_min = 0;
         } 
     }
+
     return (position - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
