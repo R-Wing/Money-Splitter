@@ -5,14 +5,20 @@ body {
 }
 
 #landing-header {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     text-align: center;
-    padding-top: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #landing-header h1 {
-    color: #fff;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 50px;
 }
 
 .slideshow {
@@ -81,7 +87,6 @@ body {
 nav {
     display: flex;
     height: 5vh;
-    flex: 1;
     background-color: #79dbaa;
     justify-content: center;
     align-items: center;
@@ -109,4 +114,14 @@ nav a:hover {
 
 nav a:active {
     background-color: #5aad84;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.underline {
+    text-decoration: underline;
 }
